@@ -40,7 +40,7 @@ img {
 .artcl {
     width: 300px;
     height: 128px;
-    background: red;
+    background-color: #7FFFD4;
     word-wrap: break-word;
     
     -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
@@ -51,7 +51,7 @@ img {
     width: 500px;
 }
 
-article {
+.spr {
 	
 	font-size: 15px;
     text-align: center;
