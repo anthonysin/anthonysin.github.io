@@ -66,6 +66,9 @@ img {
     height:128px;"
 }
 
+details {
+	word-wrap: break-word;
+}
 
 .artcl {
     width: 350px;
