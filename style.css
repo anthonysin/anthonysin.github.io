@@ -106,6 +106,12 @@ img {
     }
 }
 
+footer {
+	background-color: #2f2f2f;
+	padding-top: 50px;
+	padding-bottom: 50px; 
+}
+
 /* Links */
 a {
     color: #1abc9c;
