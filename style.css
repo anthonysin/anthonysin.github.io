@@ -10,10 +10,16 @@ body {
 }
 
 /* Titles */
-h1, h2, h3, h4, h5, h6 {
+h1 {
 	font-family: 15px arial, sans-serif;
     font-weight: 700;
     color: #FFFFFF;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: 15px arial, sans-serif;
+    font-weight: 700;
+    color: #333;
 }
 
 h1 {
