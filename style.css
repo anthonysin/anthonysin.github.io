@@ -16,7 +16,13 @@ h1 {
     color: #FFFFFF;
 }
 
-h2, h3, h4, h5, h6 {
+h4 {
+	font-family: 15px arial, sans-serif;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+h2, h3, h5, h6 {
 	font-family: 15px arial, sans-serif;
     font-weight: 700;
     color: #333;
@@ -41,11 +47,18 @@ p {
     line-height: 28px;
     margin-bottom: 25px;
     font-size: 16px;
-	color: #FFFFFF;
+	
 }
 
 .centered {
     text-align: center;
+}
+
+.foot {
+	 line-height: 28px;
+    margin-bottom: 25px;
+    font-size: 16px;
+	color: #FFFFFF;
 }
 
 img {
