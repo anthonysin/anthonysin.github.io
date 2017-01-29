@@ -70,6 +70,7 @@ img {
 .thumb{
     display: inline-block; 
     margin: auto;
+    float: left;
 
    
 }
