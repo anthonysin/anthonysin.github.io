@@ -41,7 +41,7 @@ img {
 .artcl {
     width: 350px;
     height: 128px;
-    
+    float: left;
     background-color: #F0F8FF;
     word-wrap: break-word;
     
