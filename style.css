@@ -74,11 +74,13 @@ img {
 @media screen and (max-width:800px) { 
     artcl { 
         font-size:0.8em; 
+	float: none;
     }
 }
 @media screen and (max-width:400px) { 
     artcl {
         font-size:0.7em; 
+	float: none;
     }
 }
 
@@ -118,7 +120,7 @@ a:after {
     margin: 1em 0;
     padding: 0;
 }
-<style>
+
 body {margin: 0;}
 
 ul.topnav {
