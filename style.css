@@ -59,23 +59,23 @@ img {
 
 .spr {
 	
-	font-size: 15px;
+    font-size: 15px;
     text-align: center;
-	font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif;
     
 }
 
 .thumb{
     display: inline-block; 
     margin: auto;
-    display: flex;
-    justify-content: center;
+
    
 }
 
 table {
     align-self: center;	
 }
+
 @media screen and (max-width:800px) { 
     artcl { 
         font-size:0.8em; 
@@ -126,7 +126,9 @@ a:after {
     padding: 0;
 }
 
-body {margin: 0;}
+body {
+    margin: 0;
+}
 
 ul.topnav {
     list-style-type: none;
