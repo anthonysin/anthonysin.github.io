@@ -45,6 +45,9 @@ img {
     background-color: #F0F8FF;
     word-wrap: break-word;
     
+    margin: 5px;
+   
+    max-width: 300px;
     
 	
     border-radius: 25px;
