@@ -71,7 +71,16 @@ img {
     float:left
    
 }
-
+@media screen and (max-width:800px) { 
+    artcl { 
+        font-size:0.8em; 
+    }
+}
+@media screen and (max-width:400px) { 
+    artcl {
+        font-size:0.7em; 
+    }
+}
 
 /* Links */
 a {
