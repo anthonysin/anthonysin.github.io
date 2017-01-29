@@ -37,20 +37,17 @@ img {
     height:128px;"
 }
 
-#rcorners2 {
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    padding: 20px; 
-    width: 200px;
-    height: 150px;    
-}
 
 .artcl {
     width: 300px;
     height: 128px;
-    background-color: #7FFFD4;
+    background-color: #F0F8FF;
     word-wrap: break-word;
     
+    border-radius: 25px;
+    border: 2px solid #7FFFD4;
+    padding: 20px;
+	
     -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
     transition: width 2s;
 }
