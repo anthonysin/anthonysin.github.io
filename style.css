@@ -46,7 +46,7 @@ img {
     word-wrap: break-word;
     
     margin: 5px;
-   
+    position: relative;
     max-width: 400px;
     
 	
