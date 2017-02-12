@@ -13,9 +13,9 @@ function update(weather){
     	humidity.innerHTML = weather.humidity;
     	wind.innerHtml = weather.wind;
     	direction.innerHTML = weather.direction;
-    	loc.innerHTML = weather.location;
+    	loc.innerHTML = weather.loc;
 	temp.innerHTML = weather.temp;
-	icon.src = "imgs/codes/" + weather.code + ".png";
+	icon.src = "imgs/codes/" + weather.icon + ".png";
 	console.log(icon.src);
 }
 
