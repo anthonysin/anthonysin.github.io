@@ -1,81 +1,77 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <script type="text/javascript">
-    var host = "vikaslalwani.com";
-    if ((host == window.location.host) && (window.location.protocol != "https:"))
-      window.location.protocol = "https";
-  </script>
-	<meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="I am passionate about building things for the web, learning new technologies and having some fun along the way! Currently I devote most of my time to frontend side of things, but I am not afraid to dig into backend or any other tech to get the job done.">
-  <title>Vikas Lalwani</title>
-  <link rel="canonical" href="https://vikaslalwani.com/" />
-	<link rel="stylesheet" type="text/css" href="/css/splash.css">
-</head>
+<meta charset=utf-8>
+<meta name="viewport" content="width=620">
+<title>HTML5 Demo: File API</title>
+<link rel="stylesheet" href="css/html5demos.css">
+<script src="js/h5utils.js"></script></head>
 <body>
+<section id="wrapper">
+<div id="carbonads-container"><div class="carbonad"><div id="azcarbon"></div><script type="text/javascript">var z = document.createElement("script"); z.type = "text/javascript"; z.async = true; z.src = "http://engine.carbonads.com/z/14060/azcarbon_2_1_0_VERT"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(z, s);</script></div></div>
+    <header>
+      <h1>File API</h1>
+    </header>
 
-	<input type="checkbox" id="sidebartoggler">
+<style>
+#holder { border: 10px dashed #ccc; width: 300px; height: 300px; margin: 20px auto;}
+#holder.hover { border: 10px dashed #333; }
+</style>
+<article>
+  <div id="holder"></div> 
+  <p id="status">File API & FileReader API not supported</p>
+  <p>Drag an image from your desktop on to the drop zone above to see the browser read the contents of the file and use it as the background - without uploading the file to any servers.</p>
+</article>
+<script>
+var holder = document.getElementById('holder'),
+    state = document.getElementById('status');
 
-	<div class="page-wrap">
+if (typeof window.FileReader === 'undefined') {
+  state.className = 'fail';
+} else {
+  state.className = 'success';
+  state.innerHTML = 'File API & FileReader available';
+}
+ 
+holder.ondragover = function () { this.className = 'hover'; return false; };
+holder.ondragend = function () { this.className = ''; return false; };
+holder.ondrop = function (e) {
+  this.className = '';
+  e.preventDefault();
 
-		<label for="sidebartoggler" class="toggle">☰</label>
+  var file = e.dataTransfer.files[0],
+      reader = new FileReader();
+  reader.onload = function (event) {
+    console.log(event.target);
+    holder.style.background = 'url(' + event.target.result + ') no-repeat center';
+  };
+  console.log(file);
+  reader.readAsDataURL(file);
 
-		<div class="container">
-			<div class="heading">
-				<h1>VIKAS LALWANI</h1>
-				<h2>Frontend developer and occasional writer.</h2>
-        <div class="home-page-links">
-          <a href="/about">About</a>
-          <a href="/projects">Projects</a>
-          <a href="/writing">Writing</a>
-          <a href="/contact">Contact</a>
-        </div>
-			</div>
-		</div>
+  return false;
+};
+<div id="drop_zone">Drop files here</div>
+<output id="list"></output>
 
-		<div class="sidebar">
-			<ul>
-	<li>
-		<a class='current' href="/">Home</a>
-	</li>
-	
-	<li>
-		<a class='' href="/about.html">About</a>
-	</li>
-	
-	<li>
-		<a class='' href="/projects/">Projects</a>
-	</li>
-	
-	<li>
-		<a class='' href="/writing.html">Writing</a>
-	</li>
-
-	<li>
-		<a class='' href="/blog/">Blog</a>
-	</li>		
-	
-	<li>
-		<a class='' href="/contact.html">Contact</a>
-	</li>
-</ul>
-
-		</div>
-
-	</div>
-
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-58515343-1', 'auto');
-  ga('send', 'pageview');
-
+<script>
+<a id="html5badge" href="http://www.w3.org/html/logo/">
+<img src="http://www.w3.org/html/logo/badge/html5-badge-h-connectivity-device-graphics-multimedia-performance-semantics-storage.png" width="325" height="64" alt="HTML5 Powered with Connectivity / Realtime, Device Access, Graphics, 3D & Effects, Multimedia, Performance & Integration, Semantics, and Offline & Storage" title="HTML5 Powered with Connectivity / Realtime, Device Access, Graphics, 3D & Effects, Multimedia, Performance & Integration, Semantics, and Offline & Storage">
+</a>
+    <footer><a href="/">HTML5 demos</a>/<a id="built" href="http://twitter.com/rem">@rem built this</a>/<a href="#view-source">view source</a></footer> 
+</section>
+<a href="http://github.com/remy/html5demos"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<script src="js/prettify.packed.js"></script>
+<script>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
 </script>
-
+<script>
+try {
+var pageTracker = _gat._getTracker("UA-1656750-18");
+pageTracker._trackPageview();
+} catch(err) {
+</script>
 </body>
 </html>
