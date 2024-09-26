@@ -1,43 +1,95 @@
-body{
-    margin: 10px;
-    padding: 5px;
-    background-color: lightgray;   
+:root {
+    --headercolour: #e7e8ee;
+    --backgroundcolour: hsl(192, 100%, 99%);
+    --textcolour: black;
 }
 
-main{
-    margin: 10px;
-    padding: 5px;
+* {
+    box-sizing: border-box;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
-footer{
-    margin: 10px;
-    padding: 5px;
-    background-color: lightgreen; 
+@font-face {
+    font-family: halantReg;
+    src: url(Halant,Montserrat\Halant\Halant-Regular.ttf);
 }
 
-.newP{
-    color: white;
+@font-face {
+    font-family: monsterratReg;
+    src: url(Halant,Montserrat\Montserrat\static\Montserrat-Regular.ttf);
 }
 
-.newHeader{
-    border: 10px outset yellow;
-    background-color: white;
+
+body {
+    /*font-family: Arial, Helvetica, sans-serif;*/
+    font-family: halantReg;
+}
+
+h1,h2,h3 {
+    font-family: monsterratReg;
+}
+
+h1 {
+    font-style: oblique;
+}
+
+
+header {
+    background-color: var(--headercolour);
+    padding: 30px;
     text-align: center;
+    font-size: 35px;
+    color: var(--textcolour);
 }
 
-.newDiv{
-    border: 2px outset black;
+
+section {
+    display: flex;
+    width: 100%;
+}
+
+
+nav {
+    background: var(--backgroundcolour);
+    width: 12%;
+    padding: 1vw;
+}
+
+
+nav ul {
+    display: inline;
+    list-style-type: none;
+    text-align: left;
+}
+
+
+article {
+    background-color: var(--backgroundcolour);
+    padding: 1vw;
+    width: 55%;
+    height: 65vh;
+}
+
+img {
+    max-width: 35%;
+    max-height: 65vh;
+    opacity: 0.65;
+}
+
+footer {
+    background-color: var(--headercolour);
+    padding: 10px;
     text-align: center;
-    background-color: blue;
-    animation-name: animate;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+    color: var(--textcolour);
 }
 
-@keyframes animate {
-    0% {background-color: blue;}
-    25% {background-color: purple;}
-    50% {background-color: red;}
-    75% {background-color: green;}
-    100% {background-color: blue;}
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+    section {
+        flex-direction: column;
+    }
+    img {
+        flex-direction: column;
+    }
 }
