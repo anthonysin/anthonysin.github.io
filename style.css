@@ -1,5 +1,5 @@
 :root {
-    --headercolour: #e7e8ee;
+    --pinkcolour: #ffe0f8;
     --backgroundcolour: hsl(192, 100%, 99%);
     --textcolour: black;
 }
@@ -19,7 +19,7 @@
 }
 
 .container {
-    margin:auto;
+    margin: auto;
     margin-top: 3rem;
     max-width: 90vw;
     background-color: var(--backgroundcolour);
@@ -29,10 +29,13 @@ body {
     font-family: halantReg;
 }
 
+h1 {
+    color: white;
+}
+
 h2,h3 {
     font-family: monsterratReg;
     font-style: oblique;
-    font-size: 2rem;
 }
 
 p {
@@ -40,54 +43,72 @@ p {
 }
 
 header {
-    background-color: var(--headercolour);
+    background-color: var(--pinkcolour);
     padding: 2rem;
     text-align: center;
     font-size: 2rem;
-    color: var(--textcolour);
 }
+
+nav{
+    background-color: rgb(189, 255, 209);
+    font-family: halantReg;
+    font-size: larger;
+}
+
 section {
     display: flex;
     width: 90vw;
 }
 
-nav {
-    background: var(--backgroundcolour);
-    width: 15vw;
-    padding: 1vw;
-}
-
-
-#nav{
-    display: inline;
+ol {
     list-style-type: none;
-    text-align: left;
+    overflow: hidden;
+    margin: 0;
+    padding: 1rem;
+    background-color: rgb(189, 255, 209);
 }
 
-nav li {
-    /*margin: 1rem;*/
+.nav li {
+    float: right;
+    background-color: rgb(189, 255, 209);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: white;
+}
+
+.nav li a {
+    display: block;
+    color: rgb(245, 109, 215);
+    text-align: center;
+    margin: 1rem;
+    text-decoration: none;
+}
+
+.nav li a:hover {
+    color:white;
 }
 
 article {
     background-color: var(--backgroundcolour);
     padding: 1vw;
-    width: 40vw;
+    width: 65vw;
     height: 70%;
 }
 
 img {
     background-color: var(--backgroundcolour);
-    width: 35vw;
-    height: 80vh;
+    width: 30vw;
+    height: 70vh;
+    opacity: 0.8;
     margin-top: 2rem;
-    opacity: 0.65;
+    margin-right: 1rem;
 }
 
 footer {
-    background-color: var(--headercolour);
+    background-color: var(--pinkcolour);
     padding: 1rem;
-    text-align: center;
-    color: var(--textcolour);
+    text-align: right;
+    color: white;
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
@@ -97,13 +118,21 @@ footer {
         height: auto;
         width: auto;
     }
-    article{
+
+    article {
         height: auto;
         width: auto;
     }
+
     img {
         height: auto;
         width: auto;
+    }
+    .nav {
+        display: flex;
+        flex-direction: column-reverse;
+        right: 0px;
+        top: 0px;
     }
 
 }
