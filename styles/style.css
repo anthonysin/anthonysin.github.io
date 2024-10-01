@@ -1,13 +1,3 @@
-:root {
-    --pinkcolour: #ffe0f8;
-    --backgroundcolour: hsl(192, 100%, 99%);
-    --textcolour: black;
-}
-
-* {
-    box-sizing: border-box;
-}
-
 @font-face {
     font-family: halantReg;
     src: url(Halant,Montserrat\Halant\Halant-Regular.ttf);
@@ -16,6 +6,17 @@
 @font-face {
     font-family: monsterratReg;
     src: url(Halant,Montserrat\Montserrat\static\Montserrat-Regular.ttf);
+}
+
+:root {
+    --pinkcolour: #FFE3DC;
+    --backgroundcolour: white;
+    --nav-color: #DBB4AD;
+    --textcolour: #3A2D32;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .container {
@@ -27,10 +28,7 @@
 
 body {
     font-family: halantReg;
-}
-
-h1 {
-    color: white;
+    color: var(--textcolour);
 }
 
 h2,h3 {
@@ -50,7 +48,7 @@ header {
 }
 
 nav{
-    background-color: rgb(189, 255, 209);
+    background-color: var(--nav-color);
     font-family: halantReg;
     font-size: larger;
 }
@@ -65,26 +63,27 @@ ol {
     overflow: hidden;
     margin: 0;
     padding: 1rem;
-    background-color: rgb(189, 255, 209);
+    background-color: var(--nav-color);
 }
 
 .nav li {
     float: right;
-    background-color: rgb(189, 255, 209);
+    background-color: var(--nav-color);
     margin-left: 1rem;
     margin-right: 1rem;
-    color: white;
 }
 
 .nav li a {
     display: block;
-    color: rgb(245, 109, 215);
+    color: var(--pinkcolour);
     text-align: center;
     margin: 1rem;
     text-decoration: none;
+    color: var(--textcolour);
 }
 
 .nav li a:hover {
+    text-decoration: underline;
     color:white;
 }
 
@@ -108,7 +107,6 @@ footer {
     background-color: var(--pinkcolour);
     padding: 1rem;
     text-align: right;
-    color: white;
 }
 
 /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
@@ -118,12 +116,10 @@ footer {
         height: auto;
         width: auto;
     }
-
     article {
         height: auto;
         width: auto;
     }
-
     img {
         height: auto;
         width: auto;
@@ -134,5 +130,4 @@ footer {
         right: 0px;
         top: 0px;
     }
-
 }
