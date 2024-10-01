@@ -1,11 +1,11 @@
 @font-face {
     font-family: halantReg;
-    src: url(Halant,Montserrat\Halant\Halant-Regular.ttf);
+    src: url(..\fonts\Halant-Regular.ttf);
 }
 
 @font-face {
     font-family: monsterratReg;
-    src: url(Halant,Montserrat\Montserrat\static\Montserrat-Regular.ttf);
+    src: url(..\fonts\Montserrat-Regular.ttf);
 }
 
 :root {
